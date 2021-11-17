@@ -3,6 +3,18 @@ width:80%;
 margin:0% 10%;
 }
 
-.viz1637181952718 {
+/* .viz1637181952718 {
     margin-top:10px;
+    height: 870px;
+    overflow: hidden;
+} */
+#sec1 {
+    margin-top:10px;
+    height: 880px;
+    overflow: hidden;
+}
+
+#sec3 {
+    height: 3000px;
+    overflow: hidden;
 }
