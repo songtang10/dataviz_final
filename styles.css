@@ -19,12 +19,14 @@ margin:0% 10%;
     margin-right: 30px;
 }
 
+
+
 #sec4-1 {
     display: flex;
     align-items: center;
 }
 
-#sec4-2 {
+#sec4-2 span{
     display: grid;
     justify-content: center;
 }
