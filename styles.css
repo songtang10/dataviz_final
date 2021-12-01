@@ -5,6 +5,14 @@ body {
     text-align: center;
     background-image: linear-gradient(white, #DFDAFF);
 }
+#title {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.topimg {
+    width:90%;
+}
 
 h1 {
     font-size: 50px;
@@ -12,7 +20,7 @@ h1 {
 
 h2 {
     font-size: 35px;
-    margin:20px 0px;
+    margin:60px 0px 20px 0px;
 }
 
 h4 {
@@ -24,13 +32,14 @@ h4 {
 
 p {
     font-size:16px;
-    margin:0px;
+    margin:20px 0px;
+    text-align: left;
 }
 
 .main-section {
     align-content: center;
     width:80%;
-    margin:150px 10%;
+    margin:200px 10%;
 }
 
 .big-stats {
@@ -52,6 +61,18 @@ p {
     justify-content: flex-end;
 }
 
+#fig6, #fig7, #fig8, #fig11{
+    margin-top:60px;
+}
+
+#sec4-2-radio {
+    width: fit-content;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #hidden {
     display:none;
 }
@@ -72,26 +93,28 @@ p {
     cursor: pointer;
     color:white;
 }
-
+.bottomimg{
+    width:50%;
+}
 #click-reveal button:hover{
     background-color: white;
     color: black;
     border-color: rgb(146, 103, 187);
 }
 
-.contact-entry form {
-    position: absolute;
-    left: 840px;
-    top: 218px;
+#takeaway form {
     display:flex;
+    width: fit-content;
     flex-direction: column;
     font-family: "Roboto";
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-entry input[type=text], textarea {
+#takeaway input[type=text], textarea {
     width: 400px;
     padding: 13px;
-    border: 2px solid #CDA682;
+    border: 2px solid rgb(146, 103, 187)6;
     border-radius: 5px;
     box-sizing: border-box;
     margin-bottom: 15px;
@@ -99,7 +122,7 @@ p {
 }
 
 input[type=submit] {
-    background-color: #CDA682;
+    background-color: rgb(146, 103, 187);
     color: white;
     width: 400px;
     padding: 12px 20px;
@@ -109,30 +132,7 @@ input[type=submit] {
     font-size: 16px;
 }
 
-.contact-entry input[type=submit]:hover {
-    background-color: #907359;
+#takeaway input[type=submit]:hover {
+    background-color: white;
+    color:rgb(146, 103, 187);
 }
-/* 
-.viz1637181952718 {
-    margin-top:10px;
-    height: 880px;
-    overflow: hidden;
-}
-
-
-#sec3 {
-    overflow: hidden;
-}
-
-
-
-
-#sec4-1 {
-    display: flex;
-    align-items: center;
-}
-
-#sec4-2 span{
-    display: grid;
-    justify-content: center;
-} */
