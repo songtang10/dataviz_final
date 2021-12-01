@@ -1,5 +1,5 @@
 # Data Visualization Final Report
-# Team members: Tia Tang, Hailey Jeong, Rebecca Li. Gloria Deng
+##### Team members: Tia Tang, Hailey Jeong, Rebecca Li. Gloria Deng
 
   
 #### Introduction: 
