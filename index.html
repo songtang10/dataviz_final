@@ -7,7 +7,12 @@
     <title>Data-viz Final</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="shortcut icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="https://YOUR-SERVER/javascripts/api/tableau-2.min.js"></script> 
+    
+    <link rel="stylesheet" href="css/animate.css"> 
+    <script src="js/wow.min.js"></script>
+    <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto&display=swap" rel="stylesheet">
@@ -15,18 +20,20 @@
   </head>
 
   <body>
-    <h1>COVID-19’s impact on women’s employment </h1>
-    <div class="main-section" id="sec1">
+    <h1 id="title">COVID-19’s impact on women’s employment </h1>
+    
+    <section class="main-section animate__fadeInUp" id="sec1">
+      <img class="topimg" src="images/undraw_work_time_re_hdyv.svg" alt="illustration of women in the workplace with laptop">
       <p>
-        Women around the world have been deeply affected by the COVID-19 pandemic, which has heightened the large and small inequalities—both at work and at home—that women face daily. 
-        However, before COVID-19, women had slowly been making some progress in the workplace. Although the total number is still slightly less than men's overall labor force, since 1984, women's labor participation rate has gradually increased to 47% of the total labor force in 2020.
+        Women around the world have been deeply affected by the COVID-19 pandemic, which has heightened the large and small inequalities—both at work and at home—that women face daily. However, before COVID-19, women had slowly been making some progress in the workplace. 
       </p>
+      <h2>In 1947, the gap between men and women in the workplace was huge.</h2>
       <div class="big-stats">
         <span class="big-stats-number">28%</span>
         <span class="big-stats-text">of the labor force was women in 1947</span>
       </div>
       <h2>Can you imagine how much women take up the labor force in 2020?</h2>
-      <h4>Track the change using this graph</h4>
+      <h4 id="fig1">Figure 1. Track the change using this graph</h4>
       <div class='tableauPlaceholder' id='viz1637181952718' style='position: relative'><noscript><a href='#'><img alt='Civilian labor force by sex ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZX&#47;ZX65JN954&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;ZX65JN954' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZX&#47;ZX65JN954&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637181952718');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='950px';vizElement.style.height='777px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
       <p>
         Although the total number is still slightly less than men's overall labor force, since 1984, women's labor participation rate has gradually increased to 47% of the total labor force in 2020.
@@ -35,166 +42,143 @@
         <span class="big-stats-number">47%</span>
         <span class="big-stats-text">of the labor force was women in 2020</span>
       </div>
-    </div>
+    </section>
 
-    <div class="main-section" id="sec2">
-      <h1>Overtime, there has been small, but meaningful progress for women in workforce</h1>
-      <h4>Representation of  Women in workplace</h4>
-      <script id="infogram_0_d3c7ce01-975b-4ed4-a944-a2243cefd17e" title="Bar Stacked Chart" src="https://e.infogram.com/js/dist/embed.js?byA" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/d3c7ce01-975b-4ed4-a944-a2243cefd17e" style="color:#989898!important;text-decoration:none!important;" target="_blank">Bar Stacked Chart</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    <section class="main-section animate__fadeInUp" id="sec2">
+      <h1 class="wow fadeInLeft">Overtime, there has been small, but meaningful progress for women in workforce</h1>
+      <h4 id="fig2">Figure 2. Representation of  Women in workplace</h4>
+      <script id="infogram_0_d3c7ce01-975b-4ed4-a944-a2243cefd17e" title="Bar Stacked Chart" src="https://e.infogram.com/js/dist/embed.js?byA" type="text/javascript"></script>
       <div class="big-stats">
         <span class="big-stats-number">+2%</span>
         <span class="big-stats-text">Change in the share of women taking C-suite role from 2016 to 2020</span>  
       </div>
       <p>
-        There is a clear trend that the percentage of women population decreases as the level in workforce goes up. It might indicate the fact that women are less likely to take leadership position due to marriage, pregnancy, and dominance of men power. Even though more than three fourths of men takes the C-suite roles, but there is an improving ratio in recent years. It indicates a more welcoming environment and inclusiveness as human approach better gender equality. 
+        There is a clear trend that the percentage of women population decreases as the level in workforce goes up. It might indicate the fact that women are less likely to take leadership positions due to marriage, pregnancy, and dominance of men power. More than three-fourths of men take the C-suite roles. However, there has been an improving ratio in recent years. If you compare the dataset from 2016 to 2020, most of the senior roles saw an increase in the percentage of women. It could imply that a more welcoming and inclusive work environment and the barriers that prevented women from engaging in traditionally male-dominant industries have been lowered.
       </p>
       <h2>What’s the long term change in Women’s unemployment rate?</h2>
-      <h4>Change in Unemploymen trate from 1980 to 2020</h4>
+      <h4 id="fig3">Figure 3. Change in Unemployment rate from 1980 to 2020</h4>
+      <script id="infogram_0_c713893b-6440-4b9f-931a-5cd7ad0dc9a9" title="graph2" src="https://e.infogram.com/js/dist/embed.js?c1p" type="text/javascript"></script>
       <p>
-        In the short-term, women’s enmployement rate is constantly fluatuating, the reasons behind this might include the progression of AI to replace low-skilled labor and changing economic environment. In the long-term, women’s unemployment rate is gradually decreasing, so more women are more capable of and willing to work rather than being a housewife after marriage. The corporations and government is encouraging more gender equity by There are two significant increase, one in 2008 due to economic recession and the other in 2020 due to COVID-19. In the graph above, you could hover over the dots to see the detailed figures in the tooltip. 
+        In the short term, women's unemployment rate is constantly fluctuating. However, women's unemployment rate gradually decreases in the long term, showing that an increasing number of women who are capable of and willing to work were employed. The corporations and government's efforts, such as campaigning and forbidding discrimination to induce a change in a social atmosphere to encourage more gender equity, were working. There are two significant increases, one in 2008 due to economic recession and the other in 2020 due to COVID-19. In the graph above, you could hover over the dots to see the detailed figures in the tooltip. However, overall, the US trend pre-covid 19 indicates a positive change in the work environment for women. More and more women were actively working, and society was accepting that change. 
       </p>
-    </div>
+    </section>
 
-    <div class="main-section" id="sec3">
+    <section class="main-section animate__fadeInUp" id="sec3">
       <h1>However, Covid-19 led to a major setback in female’s employment status that was improving over time</h1>
       <div class="big-stats">
         <span class="big-stats-number">15%</span>
-        <span class="big-stats-text">of Female workforce are unemployed right after the pandemic</span> 
+        <span class="big-stats-text">was the female unemployment rate right after the start of the  pandemic</span> 
       </div>
       <h2>What was the unemployment rate before Covid outbreak?</h2>
-      <h4>Male and Female Unemployment Rate in 2020</h4>
+      <h4 id="fig4">Figure 4. Male and Female Unemployment Rate in 2020</h4>
+      <div class="infogram-embed" data-id="ecde26c1-80cd-459f-871b-a3cad8cfebb8" data-type="interactive" data-title="Unemployment"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>
       <p>
         Despite the progress that seemed to be made for females in the workforce, the outbreak of Covid canceled that progress and dealt a severe blow to their employment status. The unemployment rate spiked to 15.1%, and although it has been decreasing over time since hitting the maximum in April, it is still considerably higher than before the pandemic. In fact, looking at the bars indicating 2020 March and April, it is possible to check a sudden rise in the unemployment rate after the pandemic in April. Although the unemployment rate decreased for both men and women after the pandemic, its effect is much more detrimental for women. 
       </p>
-      <div class="infogram-embed" data-id="ecde26c1-80cd-459f-871b-a3cad8cfebb8" data-type="interactive" data-title="Unemployment"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/ecde26c1-80cd-459f-871b-a3cad8cfebb8" style="color:#989898!important;text-decoration:none!important;" target="_blank">Unemployment</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
-    </div> 
+      
+    </section> 
 
-    <div class="main-section" id="sec4">
+    <section class="main-section animate__fadeInUp" id="sec4">
       <h1>Why are women more severely affected by pandemic?</h1>
       <div class="big-stats">
         <span class="big-stats-number">69%</span>
         <span class="big-stats-text">of part-time workers are female</span> 
       </div>
       <h2>More female part time workers are working involuntarily</h2>
-      <h4>Percentage of Part-time Workers in the US</h4>
-      <div class="infogram-embed" data-id="706adbdc-9fa9-457e-81f2-b8658c2173eb" data-type="interactive" data-title="Women part time workers"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/706adbdc-9fa9-457e-81f2-b8658c2173eb" style="color:#989898!important;text-decoration:none!important;" target="_blank">Women part time workers</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+      <h4 id="fig5">Figure 5. Percentage of Part-time Workers in the US</h4>
+      <div class="infogram-embed" data-id="706adbdc-9fa9-457e-81f2-b8658c2173eb" data-type="interactive" data-title="Women part time workers"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>
       <p>
-        One reason we could think of is the structure of the economy and the composition of the job market. Women make up two-thirds of the part-time workers and 62% of the low-wage workers. These jobs are the servers at restaurants, the housekeeping staff at hotels or shops, the cashiers, and workers in small businesses. These people are going through reduced hours of working and thus wage, or being laid off more easily as businesses are shutting down as the pandemic persists. Moreover, almost 75% of people working for part time is involuntary, meaning that they are working for economic reason and had no choice other than working as a part time, which suggests  the increase in economic insecurity these female part time workers are going to face will worsen as the situation persists.
+        One reason we could think of is the structure of the economy and the composition of the job market. Women make up two-thirds of the part-time workers and 62% of the low-wage workers. These jobs are the servers at restaurants, the housekeeping staff at hotels or shops, the cashiers, and workers in small businesses. These people are going through reduced hours of working and thus wage or being laid off more easily as businesses are shutting down as the pandemic persists. Moreover, almost 75% of people working part-time is involuntary, meaning that they are working for economic reasons and had no choice other than working part-time, which suggests the increase in economic insecurity these female part-time workers are going to face will worsen as the situation persists.    
       </p>
       <h2>Women carries heavier burden of childcare compared to men</h2>
       <div class="big-stats">
         <span class="big-stats-number">20%</span>
         <span class="big-stats-text">More women, compared to men, take responsibility of looking after their children</span> 
       </div>
-      <h4>Percentage of working male or female engaging in childcare</h4>
+      <h4 id="fig6">Figure 6. Percentage of working male or female engaging in childcare</h4>
+      <div class='tableauPlaceholder' id='viz1638313930524' style='position: relative'><noscript><a href='#'><img alt='Percentage Engaged in Childcare by Race - white ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16383136975410&#47;PercentageEngagedinChildcarebyRace&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_16383136975410&#47;PercentageEngagedinChildcarebyRace' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16383136975410&#47;PercentageEngagedinChildcarebyRace&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638313930524');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
       <p>
-        Women tend to carry more burden of childcare than men. Even if they are working, women are expected to and are actually carrying out more child care. This finding is discovered across all races ranging from white to hispanic, showing that this phenomenon is not limited to one particular race, but a problem that makes many women in general to suffer. During pandemic, many school and nursery shut down or became inacessible due to lock down, which made many women unable to carry out their work and childcare at the same time. 
+        Women tend to carry more burden of childcare than men. Even if they are working, women are expected to and are actually carrying out more child care. This finding is discovered across all races ranging from white to Hispanic, showing that this phenomenon is not limited to one particular race but a problem that makes many women, in general, suffer. During the pandemic, many schools and nurseries shut down or became inaccessible due to lockdown, which made many women unable to carry out their work and childcare at the same time.       
       </p>
-      <h4>Employed men and women in the 20 years</h4>
-      pending link to graph
+      <h4 id="fig7">Figure 7. Employed men and women in the 20 years</h4>
+      <script id="infogram_0_1edfdeb6-dc28-463c-a229-c9e6f7519025" title="Yifan 1st" src="https://e.infogram.com/js/dist/embed.js?T4U" type="text/javascript"></script>
       <p>
-        When we dived into the dataset of the percent of total employed rate between men and women, we can figure out that women with children in all different age groups are tended to have lower employment rates. The younger the child, the higher the unemployment rate for women. Since young children require more supervision, many of these parents are unable to work as long as daycare center closures continue and other forms of childcare remain unavailable.
+        It is not surprising that this liability resulted as a major factor that struck female workers during the pandemic. When we dived into the dataset of the percent of the total employed rate between men and women, we figured out that women with children tend to have lower employment rates than men with children. And this trend has persisted since 2009, and no meaningful change was made until 2020, suggesting that the burden of childcare solely put on women, not men, is the significant factor that hinders many women from advancing in the workplace.       
       </p>
-      pending link to graph
+      <h4 id="fig8">Figure 8. Employed men and women in the 20 years</h4>
+      <script id="infogram_0_6761885d-e082-4a8e-a3fc-d774026ca6bb" title="Yifan 2nd" src="https://e.infogram.com/js/dist/embed.js?Ak9" type="text/javascript"></script>
       <p>
-        The Women unemployment rate grew higher when they have younger kids. There is a special insight that caught my attention, that is, women without children tend to have the highest unemployment rate. We can reasonably suspect that in addition to the child factor, there are still other factors that lead to the unemployment situation of women.
+        Also, from the graph, the younger the child, the higher the unemployment rate for women. Since young children require more supervision, many of these parents are unable to work as long as daycare center closures continue and other forms of childcare remain unavailable. The women's unemployment rate grew higher when they had younger kids. There is a special insight that caught our attention, that is, women without children tend to have the highest unemployment rate. We can reasonably suspect that in addition to the child factor, there are still other factors that lead to the unemployment situation of women.      
       </p>
       <div class="big-stats">
         <span class="big-stats-number">-38%</span>
         <span class="big-stats-text">of the employment in selected industry with major woman labor force</span> 
       </div>
-      <h4>Percent change in employment, by selected industries </h4>
-      pending link to graph
+      <h4 id="fig9">Figure 9. Top 5 Percent change in employment of the US industries due to the pandemic   </h4>
+      <div class="infogram-embed" data-id="96cf10d3-37bd-417d-a09b-0faa77c6015e" data-type="interactive" data-title="Yifan 3rd"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>
+      
+
+
       <p>
-        This chart shows the massive short-term disruptions to the U.S. economy and labor market caused by Covid-19 in United State. Many women work in sectors such as hotels and food service, which were severely affected by the pandemic. Women lost their jobs because there were less  opportunities in the job markets.
+      This chart shows the top 5 industries that struggled the short-term disruptions to the pandemic and resulted in lay off of its workers in the United States. These top 5 affected industries are ones that traditionally employ a substantial number of female employees. Since they were hit hard by the pandemic the most, many women who worked in these sectors, such as hotels and food service, were laid off as a result. Women lost their jobs because of the different economic sectors' gendered nature and the pandemic's characteristic that impacted the sectors that females tend to show dominance.      
       </p>
-    </div>
+    </section>
 
-    <div class="main-section" id="sec5">
-    <h1>Despite the problem, current government support is insufficient.</h1>
-    <div class="big-stats">
-      <span class="big-stats-number">00</span>
-      <div id="click-reveal">
-        <span class="big-stats-text">What do you think this figure mean?</span> 
-        <p id="hidden">
-          This figure actually shows that there is no requirement for equal treatment in US federal law beyond minimum standards guaranteed to all workers. Some states may require equal treatment. Regulations do not ensure equal treatment of regular workers and agency workers at the user firm.
-        </p>
-        <button>click to find out</button>
+    <section class="main-section animate__fadeInUp" id="sec5">
+      <h1>Despite the problem, current government support is insufficient.</h1>
+      <div class="big-stats">
+        <span class="big-stats-number">00</span>
+        <div id="click-reveal">
+          <span class="big-stats-text">What do you think this figure mean?</span> 
+          <p id="hidden">
+            This figure actually shows that there is no requirement for equal treatment in US federal law beyond minimum standards guaranteed to all workers. Some states may require equal treatment. Regulations do not ensure equal treatment of regular workers and agency workers at the user firm.
+          </p>
+          <button id="clickbutton" onclick="reveal()">click to find out</button>
+        </div>
       </div>
-    </div>
-    <h4>Investment on family benefit</h2>
-    <script id="infogram_0_78fb8173-25d7-47f1-95e5-725d67f76951" title="Investment on family benefit" src="https://e.infogram.com/js/dist/embed.js?nNn" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/78fb8173-25d7-47f1-95e5-725d67f76951" style="color:#989898!important;text-decoration:none!important;" target="_blank">Investment on family benefit</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
-    <h4>Play this animation and see how the bar indicating USA moves.</h4>
-    <h2>What did you learn from this graph?</h2>
-    <div id="sec4-2-radio">
-      <input type="radio" id="sec4-learn-1" name="learn" value="increase">
-      <label for="increase">US’s investment for childcare is increasing</label><br>
-      <input type="radio" id="sec4-learn-2" name="learn" value="decrease">
-      <label for="age2">US’s investment for childcare is decreasing</label>
-    </div>
+      <h4>Figure 10.Investment on family benefit</h2>
+      <script id="infogram_0_78fb8173-25d7-47f1-95e5-725d67f76951" title="Investment on family benefit" src="https://e.infogram.com/js/dist/embed.js?nNn" type="text/javascript"></script>
+      <h4>Play this animation and see how the bar indicating USA moves.</h4>
+      <h2>What did you learn from this graph?</h2>
+      <div id="sec4-2-radio">
+        <input type="radio" id="sec4-learn-1" name="learn" value="increase">
+        <label for="increase">US’s investment for childcare is increasing</label><br>
+        <input type="radio" id="sec4-learn-2" name="learn" value="decrease">
+        <label for="age2">US’s investment for childcare is decreasing</label>
+      </div>
+      <h4 id="fig11">Figure 11. Use this dashboard and the slider to see how the bubble and bars indicating the US move</h4>
+      <div class='tableauPlaceholder' id='viz1638314077892' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MM&#47;MMPSS876P&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Book1_16383136975410&#47;Dashboard1?:language=en-US&amp;:embed=true' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;MM&#47;MMPSS876P&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638314077892');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <h2>
+        Is the US experiencing increase in the number of employed females?<br>
+        Not really.
+      </h2>
+      <p>
+        In summary, the US government has been doing an ineffective job to ensure females’ employment status. In some ways, the detrimental effect of Covid on female unemployment was an inevitable outcome in a situation where government support and buffer to prevent women from being marginalized in a job market is lacking significantly. Their investment in family benefits has been decreasing, and there are no regulations that guarantee the status of temporary workers when the majority of part-time workers are female. This might be something the US government has to consider seriously. 
+      </p>
+    </section>
+      
+    <section class="main-section animate__fadeInUp" id="sec6">
+      <h1>How can we prepare for a better future?</h1>
+      <img class="bottomimg" src="images/undraw_moving_forward_lhhd.svg" alt="illustration of a woman with infront of a billboard with an arrow pointing forward">
+      <p>
+        From our deep dive into the female employment status and the impact of Covid 19, we realized that the detrimental impact of the pandemic on female employment was a foreseeable disaster because the structure of the U.S. economy itself is the main cause that made women so vulnerable in front of the economic shock such as the pandemic. The majority of the part-time workers, who are easily fired in the economic downturn, are females. The gendered nature of the industries also contributed to the impact of Covid 19. The affected industries, such as hospitality and air transportation, tend to have a high concentration of female workers, which all struggled due to the lockdown. Moreover, women tend to carry the burden of childcare more than men, which also negatively affected them during the pandemic. 
+      </p>
+      <p>
+        The surprising discovery is that despite such structural issues present in the economy that exposes women to danger, especially during the economic shock, the government made little effort to protect them. For example, government spending on family benefits has been decreasing since 2010. Also, no legal protection exists to guarantee part-time workers their economic security. From our research, we thought that government should recognize measures to protect female workers are currently insufficient and invest more percentage of GDP to ensure that women can be liberated from the burden of childcare. They could also pass legislation that can protect part-time workers who are mostly females from a sudden layoff without any compensations, which could help prevent the same shock on female employment status as was the case in 2020 march.
+      </p>
+      <p>
+        Furthermore, we want to highlight the fact that one of the reasons why the females were affected by the pandemic was because many of them were working in the service industry such as hospitality, food and drinking service, and air transportation, which were severely affected by the social distancing enforced to prevent the spread of covid. We thought it is also important to enable female workers to transition to other prominent industries because the covid 19 has changed the work dynamics to the remote working. The forecasts say that the speed of current service workers being replaced by A.I. or robots will be faster due to the pandemic and remote dynamics. Thus the relevant skills need to be adopted by the female employees, and the government should help them find new job positions and educate them with the skills such as computing to enable their successful transition to the post covid era.
+      </p>
+    </section>
 
-    <h2>
-      Is the US experiencing increase in the number of employed females?<br>
-      Not really.
-    </h2>
-    <p>
-      In summary, the US government has been doing an ineffective job to ensure females’ employment status. In some ways, the detrimental effect of Covid on female unemployment was an inevitable outcome in a situation where government support and buffer to prevent women from being marginalized in a job market is lacking significantly. Their investment in family benefits has been decreasing, and there are no regulations that guarantee the status of temporary workers when the majority of part-time workers are female. This might be something the US government has to consider seriously. 
-    </p>
-
-    <div id="takeaway">
+    <section class="main-section animate__fadeInUp" id="takeaway">
       <h2>What's your takeaway?</h2>
       <form>
         <textarea id="message" name="message" placeholder="Your Message" style="height:106px"></textarea>
         <input type="submit" value="SEND MESSAGE">
       </form>
-    </div>
-  
- 
-
-
-  </div>
-
-
-    <!-- <div class="main-section" id="sec4">
-      <h1>Despite the problem, current government support is insufficient.</h1>
-      <div id="sec4-1">
-        <div id="big-stat">00</div>
-        <div id="sec4-1-right">
-          <h2>What do you think this figure mean?</h2>
-          <p>
-            This figure actually shows that there is no requirement for equal treatment in US federal law beyond minimum standards guaranteed to all workers. Some states may require equal treatment. Regulations do not ensure equal treatment of regular workers and agency workers at the user firm.
-          </p> 
-        </div>
-      </div>
-      <div id="sec4-2">
-        <script id="infogram_0_78fb8173-25d7-47f1-95e5-725d67f76951" title="Investment on family benefit" src="https://e.infogram.com/js/dist/embed.js?nNn" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/78fb8173-25d7-47f1-95e5-725d67f76951" style="color:#989898!important;text-decoration:none!important;" target="_blank">Investment on family benefit</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
-        <span>Play this animation and see how the bar indicating USA moves</span>
-        <h3>What did you learn from this graph?</h3>
-        <div id="sec4-2-radio">
-          <input type="radio" id="sec4-learn-1" name="learn" value="increase">
-          <label for="increase">US’s investment for childcare is increasing</label><br>
-          <input type="radio" id="sec4-learn-2" name="learn" value="decrease">
-          <label for="age2">US’s investment for childcare is decreasing</label>
-        </div>
-        <div id="sec4-3">
-          <iframe width="100%" height="500" frameborder="0"
-          src="https://observablehq.com/embed/@df8860181b2a8712/female-employment-vs-public-spending-on-family-benefits?cell=*"></iframe>
-          <h3>
-            Is the US experiencing increase in the number of employed females?<br>
-            Not really.
-          </h3>
-          <p>
-            In summary, the US government has been doing an ineffective job to ensure females’ employment status. In some ways, the detrimental effect of Covid on female unemployment was an inevitable outcome in a situation where government support and buffer to prevent women from being marginalized in a job market is lacking significantly. Their investment in family benefits has been decreasing, and there are no regulations that guarantee the status of temporary workers when the majority of part-time workers are female. This might be something the US government has to consider seriously. 
-          </p>
-        </div> 
-        <h1>How can we prepare for a better future?</h1>
-      </div>
-      
-
-    </div> -->
-
-  
-  
+    </section>
     
    
   </body>
+</html>
